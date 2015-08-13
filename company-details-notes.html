@@ -1,0 +1,351 @@
+<!doctype>
+<html>
+<head>
+    <title>Andusia - Companies</title>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal fade" id="newNote" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Create Note</h4>
+            </div>
+
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="note-title" placeholder="Title e.g. Delivery Terms, Payment Information...">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="7" placeholder="Enter note..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Create</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="window-pane-left">
+
+
+    <!-- Profile Area -->
+    <div class="row profile-area text-center">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <img src="profile.png" class="img-circle">
+                <span>Brad Bird <i class="fa fa-chevron-down"></i></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="side-nav-container">
+        <!-- General Header -->
+        <div class="row nav-header">
+
+            <div class="col-md-12">
+
+                <span>General</span>
+
+            </div>
+
+        </div>
+
+        <!-- Dashboard Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-globe"></i>Dashboard</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Companies Item -->
+        <div class="row nav-item active" >
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-group"></i>Companies</span>
+                </div>
+
+                <div class="pull-right">
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sub-item-container">
+
+            <!-- People Item -->
+            <div class="row nav-item">
+
+                <div class="col-md-12">
+
+
+                    <span>People</span>
+
+                </div>
+
+            </div>
+
+            <!-- Collection Points Item -->
+            <div class="row nav-item">
+
+                <div class="col-md-12">
+
+
+                        <span>Collection Points</span>
+
+                </div>
+
+            </div>
+
+            <!-- Incinerators Item -->
+            <div class="row nav-item">
+
+                <div class="col-md-12">
+
+                        <span>Incinerators</span>
+
+                </div>
+
+            </div>
+
+            <!-- Hauliers Item -->
+            <div class="row nav-item">
+
+                <div class="col-md-12">
+
+                        <span>Hauliers</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Loads Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-tag"></i>Loads</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- General Header -->
+        <div class="row nav-header">
+
+            <div class="col-md-12">
+
+                <span>Admin</span>
+
+            </div>
+
+        </div>
+
+        <!-- Users Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-user"></i>Users</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Reports Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-user"></i>Reports</span>
+                </div>
+
+                <div class="pull-right">
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Settings Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-user"></i>Settings</span>
+                </div>
+
+                <div class="pull-right">
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+
+            <div class="bottom-icon-container text-center">
+        <div class="row">
+
+                <!-- Help Item -->
+                <div class="col-md-4">
+                    <span><i class="fa fa-question"></i></span>
+                </div>
+                <!-- Inbox Item -->
+                <div class="col-md-4">
+                    <span><i class="fa fa-inbox"></i></span>
+                </div>
+                <!-- Log out Item -->
+                <div class="col-md-4">
+                    <span><i class="fa fa-sign-out"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="window-pane-right ">
+
+    <div class="container">
+
+        <!-- Main Content Header Start -->
+        <div class="row content-header">
+
+            <div class="col-md-12 text-right">
+                <div class="pull-left">
+                    <span>Everyday Recycling</span>
+                </div>
+                <div class="pull-right"><img src="logo.png" /></div>
+            </div>
+
+        </div>
+
+        <!-- Main profile page content -->
+        <div class="row">
+
+            <div class="profile-content-pane-left">
+
+                <div class="container">
+                    <div class="row"><!-- Main content sub navigation -->
+                        <div class="col-md-12 profile-sub-nav">
+                            <div class="profile-tab-button"><span>Loads</span></div>
+                            <div class="profile-tab-button"><span>People</span></div>
+                            <div class="profile-tab-button selected"><span>Notes</span></div>
+                            <div class="profile-tab-button"><span>Locations</span></div>
+                        </div>
+                    </div><!-- close profile subnav row -->
+
+                    <div class="row menu-row"> <!-- Contents top menu -->
+                        <div class="col-md-12">
+                            <div class="pull-right">
+                                <button type="button" class="btn btn-medium-blue" data-toggle="modal" data-target="#newNote">New Note</button>
+                            </div>
+                        </div>
+                    </div><!-- close button row -->
+
+
+                    <div class="row note-container"><!-- note containing row -->
+                        <div class="col-md-3 note-list-pane pull-left"><!-- Left note list pane -->
+
+                            <div class="row note-list-item">
+                                  <div class="col-md-12">
+                                    <span>Sender Name</span>
+                                    <span>Note Title</span>
+                                    <span>Date Created</span>
+                                    <span>Note Preview</span>
+                                  </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-9 note-content-pane pull-right"><!-- Left note content pane -->
+
+                        </div>
+
+                    </div>
+
+
+                </div><!-- close container -->
+            </div><!-- close left content pane -->
+
+            <!-- Start right company profile information -->
+            <div class="profile-content-pane-right">
+                <div class="container">
+                    <div class="row"><!-- img row -->
+                        <div class="col-md-12">
+                            <img class="profile-img" src="cLogo.png" />
+                        </div>
+                    </div>
+                    <div class="row"><!-- Total Loads/Invoices row -->
+                       <div class="col-md-6 text-center">
+                           <h4>30,000</h4>
+                           <h5>Total Loads</h5>
+                       </div>
+                        <div class="col-md-6 text-center">
+                            <h4>&pound;3,000,000</h4>
+                            <h5>Total Invoices</h5>
+                        </div>
+                    </div>
+                    <div class="row"><!-- Phone -->
+                        <div class="col-md-12">
+                            <span>Phone</span>
+                            <span>+44 020 8268 7000</span>
+                        </div>
+                    </div>
+                    <div class="row"><!-- Email -->
+                        <div class="col-md-12">
+                            <span>Email</span>
+                            <span>info@everydayrecycling.org</span>
+                        </div>
+                    </div>
+                    <div class="row"> <!-- Address -->
+                        <div class="col-md-12">
+                            <span>Address</span>
+                            <span>England</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

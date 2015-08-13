@@ -1,0 +1,331 @@
+<!doctype>
+<html>
+<head>
+    <title>Andusia - Companies</title>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal fade" id="newPerson" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+                <form role="form">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Create Person</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <div class="input-group">
+                                    <select class="form-control person-company-select" id="company">
+                                        <option value="0" disabled selected>Please choose the Person's Company...</option>
+                                        <option value="0">Red Lorry Yellow Lorry</option>
+                                        <option value="1">Waste of Time</option>
+                                        <option value="1">Everyday Recycling</option>
+                                        <option value="1">Not Applicable</option>
+                                    </select>
+                                    <span  class="input-group-btn">
+                                        <button type="button" class="btn btn-primary person-create-company-button">Create Company</button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div id="create-company-dropdown"><!-- start create company dropdown -->
+                                <div class="form-group">
+                                    <label for="companyName">Comapany Name</label>
+                                    <input type="text" class="form-control" id="companyName" placeholder="Enter Company Name" required="true">
+                                </div>
+                            </div> <!-- close create company dropdown -->
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactNumber">Contact Number</label>
+                                <input type="tel" class="form-control" id="contactNumber" placeholder="Example: 07713172648" required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@email.co.uk" required="true">
+                            </div>
+
+                            <div data-slide-container-target="create-user-dropdown" class="chide">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Username" required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="userType">User Type</label>
+                                    <select class="form-control required" id="userType">
+                                        <option value="0" disabled selected>Please choose a user type...</option>
+                                        <option value="0">User</option>
+                                        <option value="1">Administrator</option>
+                                    </select>
+                                </div>
+                            </div><!-- close dropdown -->
+                            <div class="form-group">
+                                <a data-slide-container="create-user-dropdown" class="btn btn-primary btn-block">Create User</a>
+
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Create</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="window-pane-left">
+
+
+    <!-- Profile Area -->
+    <div class="row profile-area text-center">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <img src="profile.png" class="img-circle">
+                <span>Brad Bird <i class="fa fa-chevron-down"></i></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="side-nav-container">
+        <!-- General Header -->
+        <div class="row nav-header">
+
+            <div class="col-md-12">
+
+                <span>General</span>
+
+            </div>
+
+        </div>
+
+        <!-- Dashboard Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-globe"></i>Dashboard</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Companies Item -->
+        <div class="row nav-item" >
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-group"></i>Companies</span>
+                </div>
+
+                <div class="pull-right">
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- People Item -->
+        <div class="row nav-item active" >
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-group"></i>People</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Loads Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-tag"></i>Loads</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- General Header -->
+        <div class="row nav-header">
+
+            <div class="col-md-12">
+
+                <span>Admin</span>
+
+            </div>
+
+        </div>
+
+        <!-- Users Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-user"></i>Users</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Reports Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-user"></i>Reports</span>
+                </div>
+
+                <div class="pull-right">
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Settings Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-user"></i>Settings</span>
+                </div>
+
+                <div class="pull-right">
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+
+            <div class="bottom-icon-container text-center">
+        <div class="row">
+
+                <!-- Help Item -->
+                <div class="col-md-4">
+                    <span><i class="fa fa-question"></i></span>
+                </div>
+                <!-- Inbox Item -->
+                <div class="col-md-4">
+                    <span><i class="fa fa-inbox"></i></span>
+                </div>
+                <!-- Log out Item -->
+                <div class="col-md-4">
+                    <span><i class="fa fa-sign-out"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="window-pane-right ">
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="row content-header">
+
+        <div class="col-md-12 text-right">
+            <div class="pull-left">
+                <span>People</span>
+            </div>
+            <div class="pull-right"><img src="logo.png" /></div>
+        </div>
+
+    </div>
+
+    <!-- Search Container -->
+
+    <div class="row search-container">
+
+        <i class="fa fa-search search-bar-icon"></i><input class="search-bar pull-right" Placeholder="Search People...">
+
+    </div>
+
+        <!-- main-body-header-->
+
+        <div class="row menu-row"> <!-- Contents top menu -->
+
+            <div class="col-md-12">
+
+                <div class="pull-left user-filter-bar">
+                    <span>Filter Users:</span><span class="active">All Users(<?= count($data['users']['id']?>)</span><span>Active Users<!--(code for counting active users)--></span><span>Suspended(8)</span><span>Prospects</span>
+                </div>
+
+                <div class="pull-right">
+                    <button type="button" class="btn btn-medium-blue new-comp-button" data-toggle="modal" data-target="#newPerson">New Person</button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Main page content -->
+        <div class="main-content-container">
+
+            <div class="row">
+
+                    <table class="table table-striped user-table table-hover">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th><th>**Picture**</th><th>Name</th><th>Email</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        <? foreach($data['users'] as $user): ?>
+                        <tr>
+                            <td class="tight-column"><input type="checkbox"></td>
+                            <td class="tight-column"><img src="user_profiles/<?= $user['user_id']; ?>.png"></td>
+                            <td><?= $user['first_name'] . " " . $user['last_name']; ?></td>
+                            <td><?= $user['email']; ?></td>
+                        </tr>
+                        <? endforeach; ?>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="bower_components/functions.js"></script>
+
+
+</body>
+</html>

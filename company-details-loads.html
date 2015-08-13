@@ -1,0 +1,550 @@
+<!doctype>
+<html>
+<head>
+    <title>Andusia - Companies</title>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal fade" id="editCompany" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Edit Company</h4>
+            </div>
+
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="companyName">Comapany Name</label>
+                        <input type="text" class="form-control" id="companyName" placeholder="Enter Company Name" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number</label>
+                        <input type="tel" class="form-control" id="contactNumber" placeholder="Example: 07713172648" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@email.co.uk" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyType">Company Type</label>
+                        <!--<select class="form-control required" id="companyType">
+                            <option value="0" disabled selected>Please choose a Company type...</option>
+                            <option value="0">Collection Point</option>
+                            <option value="1">Incinerator</option>
+                            <option value="2">Haulier</option>
+                        </select>-->
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body bg-danger">
+                                    <span>Haulier</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body bg-info">
+                                    <span>Haulier</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body bg-warning">
+                                    <span>Haulier</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="primaryAddress">Primary Address</label>
+                        <select class="form-control required" id="primaryAddress">
+                            <option value="0">Worldwide Head Office</option>
+                            <option value="1">Europe Main Finance Office</option>
+                            <option value="2">Depot UK</option>
+                            <option value="2">Depot France</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-body">
+                                    <span>67 Tudor Way<br>
+                                    Rickmansworth<br>
+                                    Hertfordshire<br>
+                                    WD3 8JA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <span>67 Tudor Way<br>
+                                    Rickmansworth<br>
+                                    Hertfordshire<br>
+                                    WD3 8JA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <span>67 Tudor Way<br>
+                                    Rickmansworth<br>
+                                    Hertfordshire<br>
+                                    WD3 8JA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Confirm Changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="window-pane-left">
+
+
+    <!-- Profile Area -->
+    <div class="row profile-area text-center">
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <img src="profile.png" class="img-circle">
+                <span>Brad Bird <i class="fa fa-chevron-down"></i></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="side-nav-container">
+        <!-- General Header -->
+        <div class="row nav-header">
+
+            <div class="col-md-12">
+
+                <span>General</span>
+
+            </div>
+
+        </div>
+
+        <!-- Dashboard Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-globe"></i>Dashboard</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Companies Item -->
+        <div class="row nav-item active" >
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-group"></i>Companies</span>
+                </div>
+
+                <div class="pull-right">
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sub-item-container">
+
+            <!-- People Item -->
+            <div class="row nav-item">
+
+                <div class="col-md-12">
+
+
+                    <span>People</span>
+
+                </div>
+
+            </div>
+
+            <!-- Collection Points Item -->
+            <div class="row nav-item">
+
+                <div class="col-md-12">
+
+
+                        <span>Collection Points</span>
+
+                </div>
+
+            </div>
+
+            <!-- Incinerators Item -->
+            <div class="row nav-item">
+
+                <div class="col-md-12">
+
+                        <span>Incinerators</span>
+
+                </div>
+
+            </div>
+
+            <!-- Hauliers Item -->
+            <div class="row nav-item">
+
+                <div class="col-md-12">
+
+                        <span>Hauliers</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Loads Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-tag"></i>Loads</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- General Header -->
+        <div class="row nav-header">
+
+            <div class="col-md-12">
+
+                <span>Admin</span>
+
+            </div>
+
+        </div>
+
+        <!-- Users Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-user"></i>Users</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Reports Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-user"></i>Reports</span>
+                </div>
+
+                <div class="pull-right">
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Settings Item -->
+        <div class="row nav-item">
+
+            <div class="col-md-12">
+
+                <div class="pull-left">
+                    <span><i class="fa fa-user"></i>Settings</span>
+                </div>
+
+                <div class="pull-right">
+                    <span><i class="fa fa-chevron-down"></i></span>
+                </div>
+
+            </div>
+
+        </div>
+
+            <div class="bottom-icon-container text-center">
+        <div class="row">
+
+                <!-- Help Item -->
+                <div class="col-md-4">
+                    <span><i class="fa fa-question"></i></span>
+                </div>
+                <!-- Inbox Item -->
+                <div class="col-md-4">
+                    <span><i class="fa fa-inbox"></i></span>
+                </div>
+                <!-- Log out Item -->
+                <div class="col-md-4">
+                    <span><i class="fa fa-sign-out"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="window-pane-right ">
+
+    <div class="container">
+
+        <!-- Main Content Header Start -->
+        <div class="row content-header">
+
+            <div class="col-md-12 text-right">
+                <div class="pull-left">
+                    <span>Everyday Recycling</span>
+                </div>
+                <div class="pull-right"><img src="logo.png" /></div>
+            </div>
+
+        </div>
+
+        <!-- Main profile page content -->
+        <div class="row">
+
+            <div class="profile-content-pane-left">
+                <div class="container">
+                    <div class="row"><!-- Main content sub navigation -->
+                        <div class="col-md-12 profile-sub-nav">
+                            <div class="profile-tab-button selected"><span>Loads</span></div>
+                            <div class="profile-tab-button"><span>People</span></div>
+                            <div class="profile-tab-button"> <span>Notes</span></div>
+                            <div class="profile-tab-button"> <span>Locations</span></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-table-container">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>Load<i class="fa fa-sort pull-right"></i></th><th>Date<i class="fa fa-sort pull-right"></i></th><th>Status<i class="fa fa-sort pull-right"></i></th><th>Bails<i class="fa fa-sort pull-right"></i></th><th>Haulier<i class="fa fa-sort pull-right"></i></th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>#00202</td>
+                            <td>Thu, 9 Oct 2014 <i class="fa fa-warning"></i></td>
+                            <td><button class="btn btn-danger btn-block disabled">Due</button></td>
+                            <td>76</td>
+                            <td>Port of Dover</td>
+                        </tr>
+                        <tr>
+                            <td>#00201</td>
+                            <td>Wed, 08 Oct 2014 <i class="fa fa-warning"></i></td>
+                            <td><button class="btn btn-danger btn-block disabled">Due</button></td>
+                            <td>55</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00200</td>
+                            <td>Mon, 06 Oct 2014 <i class="fa fa-warning"></i></td>
+                            <td><button class="btn btn-warning btn-block disabled">In Transit</button></td>
+                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00199</td>
+                            <td>Fri, 03 Oct 2014 </td>
+                            <td><button class="btn btn-warning btn-block disabled">In Transit</button></td>
+                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00198</td>
+                            <td>Thu, 02 Oct 2014</td>
+                            <td><button class="btn btn-info btn-block disabled">At Port</button></td>
+                            <td>77</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00197</td>
+                            <td>Thu, 25 Sep 2014</td>
+                            <td><button class="btn btn-success btn-block disabled">Delivered</button></td>
+                            <td>34</td>
+                            <td>Waste of Time</td>
+                        </tr>
+                        <tr>
+                            <td>#00196</td>
+                            <td>Sat, 13 Sep 2014</td>
+                            <td><button class="btn btn-info btn-block disabled">At Port</button></td>
+                            <td>56</td>
+                            <td>Port of Dover</td>
+                        </tr>
+                        <tr>
+                            <td>#00195</td>
+                            <td>Thu, 11 Sep 2014</td>
+                            <td><button class="btn btn-success btn-block disabled">Delivered</button></td>
+                            <td>55</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00192</td>
+                            <td>Fri, 05 Sep 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>
+                            <td>56</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00193</td>
+                            <td>Mon, 04 Aug 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>55</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+                        <tr>
+                            <td>#00194</td>
+                            <td>Mon, 02 Jun 2014</td>
+                            <td><button class="btn btn-default btn-block disabled">Invoiced</button></td>                            <td>34</td>
+                            <td>Red Lorry Yellow Lorry</td>
+                        </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="profile-content-pane-right">
+                <div class="container">
+                    <div class="row"><!-- img row -->
+                        <div class="col-md-12">
+                            <img class="profile-img" src="cLogo.png" />
+                        </div>
+                    </div>
+                    <div class="row"><!-- Total Loads/Invoices row -->
+                       <div class="col-md-6 text-center">
+                           <h4>30,000</h4>
+                           <h5>Total Loads</h5>
+                       </div>
+                        <div class="col-md-6 text-center">
+                            <h4>&pound;3,000,000</h4>
+                            <h5>Total Invoices</h5>
+                        </div>
+                    </div>
+                    <div class="row"><!-- Phone -->
+                        <div class="col-md-12">
+                            <span>Phone</span>
+                            <span>+44 020 8268 7000</span>
+                        </div>
+                    </div>
+                    <div class="row"><!-- Email -->
+                        <div class="col-md-12">
+                            <span>Email</span>
+                            <span>info@everydayrecycling.org</span>
+                        </div>
+                    </div>
+                    <div class="row"> <!-- Address -->
+                        <div class="col-md-12">
+                            <span>Address</span>
+                            <span>England</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span data-toggle="modal" data-target="#editCompany">Edit Company</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="bower_components/functions.js"></script>
+
+</body>
+</html>

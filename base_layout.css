@@ -1,0 +1,82 @@
+/**
+ * Font Imports
+ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:100,400,300,200,600,700);
+
+/**
+ * DOM Base Element Styles
+ */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Helvetica Neue', 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/**
+ * BS3 Override Styles
+ */
+.container {
+    width: 100%;
+}
+
+/**
+ * Base Layout Styles
+ */
+.window-pane-left,
+.window-pane-right {
+    height: 100%;
+}
+
+.window-pane-left {
+    background: #2a313a;
+    width: 250px;
+    color: #ddd;
+    float: left;
+}
+
+.window-pane-right {
+    background: #eee;
+    width: calc(100% - 250px);
+    float: right;
+}
+
+.window-pane-left .row-profile {
+    line-height: 80px;
+    background: #3D4B5A;
+}
+
+.window-pane-left .row-profile img {
+    margin-right: 10px;
+    width: 40px;
+}
+
+.window-pane-right .top-pane {
+    height: 80px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+}
+
+.window-pane-right .top-pane .logo,
+.window-pane-right .top-pane .title,
+.window-pane-left .row.row-profile {
+    height: 60px;
+}
+
+.window-pane-right .top-pane .logo {
+    margin: 10px;
+}
+
+.window-pane-right .top-pane .title {
+    padding-left: 20px;
+}
+
+.window-pane-right .top-pane .title span {
+    line-height: 75px;
+    font-weight: 300;
+
+}
